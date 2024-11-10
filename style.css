@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "TildaSans";
+  src: url("./font/TildaSans-VF.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: TildaSans, sans-serif;
+}
+
+.game-board {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.player {
+  flex: 1;
+  height: 100%;
+}
+
+.player_left {
+  background-color: red;
+}
+
+.player_right {
+  background-color: blue;
+}
+
+.game-board__score {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.score__player-right,
+.score__player-left {
+  width: 100px;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.hint {
+  color: #fff;
+  opacity: 0.75;
+  font-size: 0.75rem;
+}
