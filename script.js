@@ -33,15 +33,6 @@ const addScoreToPlayer = (player) => {
   }
 };
 
-// Desktop double click
-playerLeft.addEventListener("dblclick", () => {
-  addScoreToPlayer("left", 1);
-});
-
-playerRight.addEventListener("dblclick", () => {
-  addScoreToPlayer("right", 1);
-});
-
 // Mobile double tap
 /* Regex test to determine if user is on mobile */
 if (
@@ -54,6 +45,15 @@ if (
   });
   playerRight.addEventListener("touchend", doubleTapToAddScore("right"), {
     passive: false,
+  });
+} else {
+  // Desktop double click
+  playerLeft.addEventListener("dblclick", () => {
+    addScoreToPlayer("left", 1);
+  });
+
+  playerRight.addEventListener("dblclick", () => {
+    addScoreToPlayer("right", 1);
   });
 }
 
